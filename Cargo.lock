@@ -1197,6 +1197,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "cosmic-applet-memory"
+version = "1.0.15"
+dependencies = [
+ "i18n-embed",
+ "i18n-embed-fl",
+ "libcosmic",
+ "rust-embed",
+ "tokio",
+ "tracing",
+ "tracing-log",
+ "tracing-subscriber",
+]
+
+[[package]]
 name = "cosmic-applet-minimize"
 version = "1.0.15"
 dependencies = [
@@ -1358,6 +1372,7 @@ dependencies = [
  "cosmic-applet-battery",
  "cosmic-applet-bluetooth",
  "cosmic-applet-input-sources",
+ "cosmic-applet-memory",
  "cosmic-applet-minimize",
  "cosmic-applet-network",
  "cosmic-applet-notifications",
