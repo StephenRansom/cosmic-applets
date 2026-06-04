@@ -6,7 +6,7 @@ fn main() -> cosmic::iced::Result {
     tracing_subscriber::fmt::init();
     let _ = tracing_log::LogTracer::init();
 
-    tracing::info!("Starting memory applet with version {VERSION}");
+    tracing::info!("Starting memory monitor applet with version {VERSION}");
 
-    cosmic_applet_memory::run()
+    cosmic_applet_memory_monitor::run()
 }

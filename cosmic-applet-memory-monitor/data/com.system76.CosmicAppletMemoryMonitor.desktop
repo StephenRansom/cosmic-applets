@@ -1,12 +1,12 @@
 [Desktop Entry]
-Name=Memory
+Name=Memory Monitor
 Comment=Show memory usage as a ring chart in the panel
 Type=Application
-Exec=cosmic-applet-memory
+Exec=cosmic-applet-memory-monitor
 Terminal=false
 Categories=COSMIC;
 Keywords=COSMIC;Applet;Memory;RAM;Usage;Monitor;
-Icon=com.system76.CosmicAppletMemory-symbolic
+Icon=com.system76.CosmicAppletMemoryMonitor-symbolic
 StartupNotify=true
 NoDisplay=true
 X-CosmicApplet=true

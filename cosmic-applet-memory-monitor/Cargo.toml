@@ -1,5 +1,5 @@
 [package]
-name = "cosmic-applet-memory"
+name = "cosmic-applet-memory-monitor"
 version = "1.0.15"
 edition = "2024"
 license = "GPL-3.0-only"

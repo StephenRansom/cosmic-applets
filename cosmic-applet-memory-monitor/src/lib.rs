@@ -94,7 +94,7 @@ impl cosmic::Application for Memory {
     type Executor = cosmic::SingleThreadExecutor;
     type Flags = ();
     type Message = Message;
-    const APP_ID: &'static str = "com.system76.CosmicAppletMemory";
+    const APP_ID: &'static str = "com.system76.CosmicAppletMemoryMonitor";
 
     fn init(core: cosmic::app::Core, _flags: ()) -> (Self, app::Task<Message>) {
         let mut app = Self {

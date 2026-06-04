@@ -1,8 +1,9 @@
-# COSMIC Memory Applet
+# COSMIC Memory Monitor Applet
 
 A panel applet for the COSMIC desktop that shows current RAM usage as a ring
-(donut) chart. It reads `/proc/meminfo` every two seconds; clicking it opens a
-small popup with the usage percentage and used / total GiB.
+(donut) chart with the percentage in the centre. It reads `/proc/meminfo` every
+two seconds; clicking it opens a small popup with the usage percentage and
+used / total GiB.
 
 The chart is drawn with iced's `Canvas` (`RingChart` in `src/lib.rs`): a faint
 full-circle track with an accent-coloured arc on top, proportional to
@@ -28,7 +29,7 @@ From the workspace root, run the applet as a floating window to eyeball the
 ring without touching the panel:
 
 ```bash
-cargo run -p cosmic-applet-memory
+cargo run -p cosmic-applet-memory-monitor
 ```
 
 ## Install just this applet (no sudo, leaves packaged applets untouched)
@@ -44,15 +45,15 @@ cargo build --release -p cosmic-applets   # or: just build-release
 # 1. Binary — symlink the multicall binary under this applet's name.
 #    ~/.local/bin must be on the PATH that cosmic-panel inherits.
 mkdir -p ~/.local/bin
-ln -sf "$PWD/target/release/cosmic-applets" ~/.local/bin/cosmic-applet-memory
+ln -sf "$PWD/target/release/cosmic-applets" ~/.local/bin/cosmic-applet-memory-monitor
 
 # 2. Desktop file — the generated copy with localized strings.
-install -Dm644 target/xdgen/com.system76.CosmicAppletMemory.desktop \
-  ~/.local/share/applications/com.system76.CosmicAppletMemory.desktop
+install -Dm644 target/xdgen/com.system76.CosmicAppletMemoryMonitor.desktop \
+  ~/.local/share/applications/com.system76.CosmicAppletMemoryMonitor.desktop
 
 # 3. Icon
-install -Dm644 cosmic-applet-memory/data/icons/scalable/apps/com.system76.CosmicAppletMemory-symbolic.svg \
-  ~/.local/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletMemory-symbolic.svg
+install -Dm644 cosmic-applet-memory-monitor/data/icons/scalable/apps/com.system76.CosmicAppletMemoryMonitor-symbolic.svg \
+  ~/.local/share/icons/hicolor/scalable/apps/com.system76.CosmicAppletMemoryMonitor-symbolic.svg
 ```
 
 Then restart the panel and add the applet:
@@ -61,7 +62,7 @@ Then restart the panel and add the applet:
 pkill cosmic-panel   # cosmic-session respawns it
 ```
 
-Open **Settings → Desktop → Panel → Add applet** and choose **Memory**.
+Open **Settings → Desktop → Panel → Add applet** and choose **Memory Monitor**.
 
 > If the applet fails to launch, the usual cause is `~/.local/bin` not being on
 > the `PATH` that `cosmic-panel` inherits. Either ensure it is exported in your

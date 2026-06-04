@@ -42,10 +42,10 @@ fn main() {
             "cosmic-applet-input-sources-keywords",
         ),
         (
-            "com.system76.CosmicAppletMemory",
-            "cosmic-applet-memory",
-            "cosmic-applet-memory-comment",
-            "cosmic-applet-memory-keywords",
+            "com.system76.CosmicAppletMemoryMonitor",
+            "cosmic-applet-memory-monitor",
+            "cosmic-applet-memory-monitor-comment",
+            "cosmic-applet-memory-monitor-keywords",
         ),
         (
             "com.system76.CosmicAppletMinimize",
