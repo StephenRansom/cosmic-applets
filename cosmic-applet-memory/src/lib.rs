@@ -1,4 +1,3 @@
-// Copyright 2024 System76 <info@system76.com>
 // SPDX-License-Identifier: GPL-3.0-only
 
 mod localize;
@@ -220,7 +219,7 @@ impl canvas::Program<Message, cosmic::Theme> for RingChart {
 
         // Leave room for the stroke so it isn't clipped at the bounds.
         let side = bounds.width.min(bounds.height);
-        let thickness = (side * 0.18).max(2.0);
+        let thickness = (side * 0.13).max(2.0);
         let radius = (side - thickness) / 2.0;
         let center = Point::new(bounds.width / 2.0, bounds.height / 2.0);
 
@@ -259,7 +258,7 @@ impl canvas::Program<Message, cosmic::Theme> for RingChart {
             content: label,
             position: center,
             color: fg,
-            size: Pixels(side * 0.28),
+            size: Pixels(side * 0.34),
             align_x: cosmic::iced::core::text::Alignment::Center,
             align_y: cosmic::iced::core::alignment::Vertical::Center,
             ..Default::default()
